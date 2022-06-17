@@ -1,0 +1,30 @@
+.App {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+
+  flex-direction: column;
+  width: 100%;
+
+  .composant-container {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+
+    .separate-container {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      margin: 8% 0;
+
+      .bar-separate {
+        width: 50%;
+        background-color: rgba(255, 255, 255, 0.472);
+        border: 1px white;
+        height: 4px;
+        border-radius: 60%;
+      }
+    }
+  }
+}

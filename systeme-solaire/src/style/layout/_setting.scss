@@ -1,0 +1,170 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(../font/Montserrat-Light.ttf);
+}
+
+@font-face {
+  font-family: "Bungee";
+  src: url(../font/BungeeOutline-Regular.ttf);
+}
+
+@font-face {
+  font-family: "nasa";
+  src: url(../font/nasalization-rg.otf);
+}
+
+$font1: Montserrat, sans-serif;
+$font2: Bungee;
+$font3: nasa;
+
+$color1: rgb(153, 198, 148);
+
+$colorMercure: linear-gradient(
+  45deg,
+  #da7823,
+  #ae7929,
+  #773309,
+  #fbe7af,
+  #d57f29,
+  #fccc53,
+  #582302
+);
+$colorVenus: linear-gradient(
+  45deg,
+  #cbb794,
+  #ad9569,
+  #2f291d,
+  #c5ac85,
+  #68604f,
+  #a48c64,
+  #483c2c
+);
+$colorTerre: linear-gradient(
+  45deg,
+  #2a6287,
+  rgb(67, 155, 182),
+  #ab9895,
+  #114d80,
+  #a7b9c9,
+  #6b6d65,
+  rgb(12, 29, 157)
+);
+$colorMars: linear-gradient(
+  45deg,
+  #ca4817,
+  #6a2d0b,
+  #f6b26a,
+  #c45013,
+  #aa6336,
+  #7a270a,
+  #e3742f
+);
+$colorJupiter: linear-gradient(
+  45deg,
+  #ccb5a1,
+  #b08766,
+  #c7c0b7,
+  #a47b53,
+  #95acbe,
+  #8a6542,
+  #89939c
+);
+$colorSaturne: linear-gradient(
+  45deg,
+  #efb986,
+  #e5b280,
+  #4c3b27,
+  #ffe0b9,
+  #9e845a,
+  #edbb86,
+  #d0a174
+);
+$colorUranus: linear-gradient(
+  45deg,
+  #d3f9fa,
+  #c1e7ea,
+  #bfe5e8,
+  #8cb1b7,
+  #8db2b8,
+  #577478,
+  #6f9097
+);
+$colorNeptune: linear-gradient(
+  45deg,
+  #4566fd,
+  #4063fb,
+  #3854c9,
+  #374eca,
+  #4368fd,
+  #3243ab,
+  #252a63
+);
+$colorSun: linear-gradient(
+  45deg,
+  #c02121,
+  #f6e47c,
+  #bf2021,
+  #e08824,
+  #e08624,
+  #875325,
+  #cb3423
+);
+
+@mixin planeteName {
+  color: $color1;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  font: $font2;
+  font-weight: 600;
+  filter: drop-shadow(-4px 2px 56px rgb(11, 79, 4));
+  text-shadow: 0 0 0.2em rgb(160, 227, 152);
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+
+@mixin planet-form{
+  position: absolute;
+  border-radius: 50%;
+}
+
+@mixin select {
+  color: red;
+  filter: drop-shadow(-4px 2px 56px red);
+  text-shadow: 0 0 0.2em red;
+}
+
+@mixin outline {
+  border-radius: 50%;
+  border: 1px dotted #ddd9;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin color {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  background-size: 400%;
+  width: calc(100%);
+  height: calc(100%);
+  z-index: -1;
+  animation: animate 20s linear infinite;
+  margin-top: 8px;
+
+  @keyframes animate {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+}
